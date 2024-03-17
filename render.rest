@@ -1,11 +1,9 @@
+###Render TRY PLAYERS
+https://cse341-projectweek3-munives.onrender.com/players/
 
-### Render TRY BY ID
-https://cse341-project1-munives-1.onrender.com/users/65e3e49b3dd8cef28e0ceb15
-
-
-###Render TRY USERS
-http://cse341-project1-munives-1.onrender.com/users/
+###Render TRY TEAMS
+https://cse341-projectweek3-munives.onrender.com/teams/
 
 ### TRY RENDER API-DOCS
-http://cse341-project1-munives-1.onrender.com/api-docs/
+https://cse341-projectweek3-munives.onrender.com/api-docs
 

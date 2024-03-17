@@ -3,22 +3,40 @@
 const mongodb = require("../data/database");
 const ObjectId = require("mongodb").ObjectId;
 
-const getAll = async (req, res) => {
-  const result = await mongodb.getDatabase().db().collection("teams").find();
-  result.toArray().then((teams) => {
-      res.setHeader("Content-Type", "application/json");
+const getAll = (req, res) => {
+  mongodb
+    .getDb()
+    .db()
+    .collection('teams')
+    .find()
+    .toArray((err, teams) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
       res.status(200).json(teams);
     });
-  };
-
-  const getSingle = async (req, res) => {
-    const teamId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection("teams").find({ _id: teamId });
-    result.toArray().then((teams) => {
-      res.setHeader("Content-Type", "application/json");
-      res.status(200).json(teams[0]);
-  });
 };
+
+const getSingle = (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact id to find a contact.');
+  }
+  const teamId = new ObjectId(req.params.id);
+  mongodb
+    .getDb()
+    .db()
+    .collection('teams')
+    .find({ id: teamId })
+    .toArray((err, result) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(result[0]);
+    });
+};
+
 
 const createTeam = async (req, res) => {
   const team = {
@@ -37,6 +55,9 @@ const createTeam = async (req, res) => {
 };
 
 const updateTeam = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact id to update a contact.');
+  }
   const teamId = new ObjectId(req.params.id);
   const team = {
     ID: req.body.ID,
@@ -54,7 +75,9 @@ const updateTeam = async (req, res) => {
 };
 
 const deleteTeam = async (req, res) => {
-  //swagger.tags=['Hello World']
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact id to delete a contact.');
+  }
   const teamId = new ObjectId(req.params.id);
   const response = await mongodb.getDatabase().db().collection("teams").deleteOne({ _id: teamId });
   if (response.deleteCount > 0){

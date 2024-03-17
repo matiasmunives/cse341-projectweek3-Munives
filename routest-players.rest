@@ -17,7 +17,7 @@ Content-type: application/json
 "ID": 5555,
 "Forename": "Matias",
 "Surname": "MUNIVES",
-"ImageURL": "",
+"ImageURL": ""
 }
 
 ### PUT player (update)
@@ -29,7 +29,7 @@ Content-type: application/json
 "ID": 3331,
 "Forename": "Lisandro",
 "Surname": "LOPEZ",
-"ImageURL": "https://cdn.soccerwiki.org/images/player/3331.png",
+"ImageURL": "https://cdn.soccerwiki.org/images/player/3331.png"
 }
 
 ### DELETE players

@@ -27,7 +27,7 @@ Content-type: application/json
 
 {
 "ID": 268,
-"Name": "Arsenal de Sarandi",
+"Name": "Arsenal Sarandi",
 "ShortName": "ARS",
 "ImageURL": "https://cdn.soccerwiki.org/images/logos/clubs/268.png"
 }
