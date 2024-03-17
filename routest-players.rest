@@ -14,10 +14,10 @@ POST http://localhost:3000/players HTTP/1.1
 Content-type: application/json
 
 {
-"ID": 5555,
+"ID": "5555",
 "Forename": "Matias",
 "Surname": "MUNIVES",
-"ImageURL": ""
+"ImageURL": "https://cdn.soccerwiki.org/images/player/3331.png"
 }
 
 ### PUT player (update)
