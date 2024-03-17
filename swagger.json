@@ -5,7 +5,7 @@
       "description": "Soccer API",
       "version": "1.0.0"
     },
-    "host": "cse341-project1-munives-1.onrender.com",
+    "host": "cse341-projectweek3-munives.onrender.com",
     "basePath": "/",
     "schemes": [
       "https"
