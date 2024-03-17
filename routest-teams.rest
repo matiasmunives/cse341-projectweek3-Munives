@@ -14,7 +14,7 @@ POST http://localhost:3000/teams HTTP/1.1
 Content-type: application/json
 
 {
-"ID": "5555",
+"ID": 5555,
 "Name": "Munives FC",
 "ShortName": "MMFC",
 "ImageURL": "https://cdn.soccerwiki.org/images/logos/clubs/268.png"
@@ -26,7 +26,7 @@ PUT http://localhost:3000/teams/65f64c1def7eb3a3aa2becff HTTP/1.1
 Content-type: application/json
 
 {
-"ID": "268",
+"ID": 268,
 "Name": "Arsenal de Sarandi",
 "ShortName": "ARS",
 "ImageURL": "https://cdn.soccerwiki.org/images/logos/clubs/268.png"
