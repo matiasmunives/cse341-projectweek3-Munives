@@ -26,8 +26,8 @@ const createPlayer = async (req, res) => {
   //swagger.tags=['Hello World']
   const player = {
     ID: req.body.ID,
-    Forename: req.body.forename,
-    Surname: req.body.surname,
+    Forename: req.body.Forename,
+    Surname: req.body.Surname,
     ImageURL: req.body.ImageURL,
   };
   const response = await mongodb.getDatabase().db().collection("players").insertOne(player);
@@ -44,8 +44,8 @@ const updatePlayer = async (req, res) => {
   const playerId = new ObjectId(req.params.id);
   const player = {
     ID: req.body.ID,
-    Forename: req.body.forename,
-    Surname: req.body.surname,
+    Forename: req.body.Forename,
+    Surname: req.body.Surname,
     ImageURL: req.body.ImageURL,
   };
   const response = await mongodb.getDatabase().db().collection("players").replaceOne({ _id: playerId }, player);
@@ -57,7 +57,7 @@ const updatePlayer = async (req, res) => {
   }
 };
 
-const deletePLayer = async (req, res) => {
+const deletePlayer = async (req, res) => {
   //swagger.tags=['Hello World']
   const playerId = new ObjectId(req.params.id);
   const response = await mongodb.getDatabase().db().collection("players").deleteOne({ _id: playerId });
@@ -74,5 +74,5 @@ module.exports = {
   getSingle,
   createPlayer,
   updatePlayer,
-  deletePLayer,
+  deletePlayer,
 };

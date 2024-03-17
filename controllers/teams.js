@@ -26,8 +26,8 @@ const createTeam = async (req, res) => {
   //swagger.tags=['Hello World']
   const team = {
     ID: req.body.ID,
-    Name: req.body.name,
-    ShortName: req.body.shortname,
+    Name: req.body.Name,
+    ShortName: req.body.ShortName,
     ImageURL: req.body.ImageURL,
   };
   const response = await mongodb.getDatabase().db().collection("teams").insertOne(team);
@@ -44,8 +44,8 @@ const updateTeam = async (req, res) => {
   const teamId = new ObjectId(req.params.id);
   const team = {
     ID: req.body.ID,
-    Name: req.body.name,
-    ShortName: req.body.shortname,
+    Name: req.body.Name,
+    ShortName: req.body.ShortName,
     ImageURL: req.body.ImageURL,
   };
   const response = await mongodb.getDatabase().db().collection("teams").replaceOne({ _id: teamId }, team);

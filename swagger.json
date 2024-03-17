@@ -1,168 +1,289 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "title": "My API Week 03 - Project",
-    "description": "Contacts API",
-    "version": "1.0.0"
-  },
-  "host": "cse341-project1-munives-1.onrender.com",
-  "basePath": "/",
-  "schemes": [
-    "https"
-  ],
-  "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
+    "swagger": "2.0",
+    "info": {
+      "title": "My API Week 02 - Contacts Project",
+      "description": "Contacts API",
+      "version": "1.0.0"
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/users/": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+    "host": "cse341-project1-munives-1.onrender.com",
+    "basePath": "/",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "description": "",
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
           }
         }
       },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
+      "/api-docs": {
+        "get": {
+          "description": "",
+          "responses": {
+            "default": {
+              "description": ""
+            }
+          }
+        }
+      },
+      "/players/": {
+        "get": {
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "example": "any"
+                  },
+                  "Forename": {
+                    "example": "any"
+                  },
+                  "Surname": {
+                    "example": "any"
+                  },
+                  "ImageURL": {
+                    "example": "any"
+                  }
                 }
               }
             }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/users/{id}": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
+      "/players/{id}": {
+        "get": {
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "example": "any"
+                  },
+                  "Forename": {
+                    "example": "any"
+                  },
+                  "Surname": {
+                    "example": "any"
+                  },
+                  "ImageURL": {
+                    "example": "any"
+                  }
                 }
               }
             }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+        },
+        "delete": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+      "/teams/": {
+        "get": {
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
           }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+        },
+        "post": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "example": "any"
+                  },
+                  "Name": {
+                    "example": "any"
+                  },
+                  "ShortName": {
+                    "example": "any"
+                  },
+                  "ImageURL": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/teams/{id}": {
+        "get": {
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "example": "any"
+                  },
+                  "Name": {
+                    "example": "any"
+                  },
+                  "ShortName": {
+                    "example": "any"
+                  },
+                  "ImageURL": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       }
     }
-  }
 }

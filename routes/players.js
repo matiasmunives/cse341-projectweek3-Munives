@@ -9,7 +9,7 @@ router.get("/", usersController.getAll);
 router.get("/:id", usersController.getSingle);
 router.post("/", usersController.createPlayer);
 router.put("/:id", usersController.updatePlayer);
-router.delete("/:id", usersController.deletePLayer);
+router.delete("/:id", usersController.deletePlayer);
 
 
 module.exports = router;

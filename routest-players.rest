@@ -22,7 +22,7 @@ Content-type: application/json
 
 ### PUT player (update)
 
-PUT http://localhost:3000/users/65e3e49b3dd8cef28e0ceb15 HTTP/1.1
+PUT http://localhost:3000/players/65f64ba9ef7eb3a3aa2be171 HTTP/1.1
 Content-type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-type: application/json
 }
 
 ### DELETE players
-DELETE http://localhost:3000/users/65f64ba9ef7eb3a3aa2be172 HTTP/1.1
+DELETE http://localhost:3000/players/65f64ba9ef7eb3a3aa2be172 HTTP/1.1
 
 ### TRY RENDER
 http://cse341-project1-munives-1.onrender.com/api-docs/
