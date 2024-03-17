@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
 
 });
 
-router.use('/users', require('./users'));
+router.use('/players', require('./players'));
+router.use('/teams', require('./teams'));
+
 
 module.exports = router;
