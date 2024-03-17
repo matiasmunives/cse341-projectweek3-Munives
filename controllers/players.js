@@ -35,7 +35,7 @@ const createPlayer = async (req, res) => {
   res.status(204).send();
   }
   else {
-  res.status(500).json(response.error || 'Some error occurred while updating the user.');
+  res.status(500).json(response.error || 'Some error occurred while creating the player.');
   }
 };
 
@@ -53,7 +53,7 @@ const updatePlayer = async (req, res) => {
   res.status(204).send();
   }
   else {
-  res.status(500).json(response.error || 'Some error occurred while updating the user.');
+  res.status(500).json(response.error || 'Some error occurred while updating the player.');
   }
 };
 
@@ -65,7 +65,7 @@ const deletePlayer = async (req, res) => {
   res.status(204).send();
   }
   else {
-  res.status(500).json(response.error || 'Some error occurred while updating the user.');
+  res.status(500).json(response.error || 'Some error occurred while deleting the player.');
   }
 };
 
