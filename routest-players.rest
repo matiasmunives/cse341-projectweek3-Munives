@@ -26,12 +26,12 @@ PUT http://localhost:3000/players/65f64ba9ef7eb3a3aa2be17a HTTP/1.1
 Content-type: application/json
 
 {
-"ID": 3578,
-"Forename": "Luciano",
-"Surname": "LEGUIZAMÓN",
-"ImageURL": "https://cdn.soccerwiki.org/images/player/3578.png"
+    "ID": 3578,
+    "Forename": "Luciano",
+    "Surname": "LEGUIZAMÓN",
+    "ImageURL": "https://cdn.soccerwiki.org/images/player/3578.png"
 }
-
+|
 ### DELETE players
 DELETE http://localhost:3000/players/65f64ba9ef7eb3a3aa2be172 HTTP/1.1
 
