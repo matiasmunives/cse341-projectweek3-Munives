@@ -4,16 +4,17 @@ const express = require("express");
 const router = express.Router();
 
 const usersController = require("../controllers/teams");
+const { isAuthenticated } = require('../middleware/authenticate');
 const validation = require('../middleware/validate');
 
-const { isAuthenticated } = require('../middleware/authenticate');
+
 
 
 router.get("/", usersController.getAll);
 router.get("/:id", usersController.getSingle);
-router.post("/", validation.saveTeam, usersController.createTeam);
-router.put("/:id", validation.saveTeam, usersController.updateTeam);
-router.delete("/:id", usersController.deleteTeam);
+router.post("/", isAuthenticated, validation.saveTeam, usersController.createTeam);
+router.put("/:id", isAuthenticated, validation.saveTeam, usersController.updateTeam);
+router.delete("/:id", isAuthenticated, usersController.deleteTeam);
 
 
 module.exports = router;
