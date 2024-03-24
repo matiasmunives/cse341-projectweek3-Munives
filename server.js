@@ -4,7 +4,6 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
 const mongodb = require('./data/database');
 const app = express();
 const passport = require('passport');

@@ -8,5 +8,5 @@ https://cse341-projectweek3-munives.onrender.com/teams/
 https://cse341-projectweek3-munives.onrender.com/api-docs
 
 ###Render Login
-https://cse341-projectweek3-munives.onrender.com/gituhub/callback
+https://cse341-projectweek3-munives.onrender.com/github/callback
 
