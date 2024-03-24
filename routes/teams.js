@@ -10,13 +10,9 @@ const { isAuthenticated } = require('../middleware/authenticate');
 
 
 router.get("/", usersController.getAll);
-
 router.get("/:id", usersController.getSingle);
-
 router.post("/", validation.saveTeam, usersController.createTeam);
-
 router.put("/:id", validation.saveTeam, usersController.updateTeam);
-
 router.delete("/:id", usersController.deleteTeam);
 
 

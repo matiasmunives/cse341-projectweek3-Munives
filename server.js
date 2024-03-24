@@ -46,7 +46,7 @@ passport.use(new gitHubStrategy({
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
   callbackURL: process.env.CALLBACK_URL
 },
-function(accessToken,refreshTOken, profile, done){
+function(accessToken, refreshTOken, profile, done){
   //User.findOrCreate({ githubID: profile.ID }, function (err, user){
     return done(null, profile);
     //})
@@ -61,6 +61,7 @@ passport.deserializeUser((user, done) => {
 });
 
 app.get('/', (req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged Out")});
+
 app.get('/github/callback', passport.authenticate('github', {
   failureRedirect: '/api-docs', session: false}),
   (req, res) => {
